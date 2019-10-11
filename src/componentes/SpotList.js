@@ -37,6 +37,7 @@ function SpotList({ tech, navigation }){
                 renderItem={({ item })=> (
                     <View style={styles.listItem}>
                         <Image style={styles.thumbnail} source={{ uri: item.thumbnail_url }} onError={ e => {console.log(e)}}/>
+                        {console.log(item.thumbnail_url)}
                         
                         <Text style={styles.company}>{item.company}</Text>
                         <Text style={styles.price}>{item.price ?  `R$${item.price}/dia` : 'GRATUITO'}</Text>
